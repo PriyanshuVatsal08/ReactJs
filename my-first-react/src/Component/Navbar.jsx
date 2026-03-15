@@ -3,9 +3,11 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <div>
-      <h3>I am navbar </h3>
+    <>
+    <div style={text-red}>
+      <h1>Hello Jii</h1>
     </div>
+    </>
   )
 }
 
