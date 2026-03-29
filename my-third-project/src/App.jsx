@@ -1,25 +1,28 @@
-import Navbar from './component/Navbar'
-import Button from './component/Button'
-import './App.css'
 import { useState } from 'react'
-
+import './App.css'
+import PropAsChildren from './component/PropAsChildren'
+import PropsAsFunction from './component/PropsAsFunction'
 function App() {
 
   const[count,setCount]=useState(0);
 
-  function clickHandler(){
+  function clickCount(){
     setCount(count+1);
   }
+
   return (
-   <>
-      <Button clickHandler={clickHandler}>
-        <h1>{count}</h1>
-      </Button> 
-      <Navbar name="Priyanshu Vatsal">
-        <h1>Hello Priyanshu</h1>
-        <p>How are you</p>
-      </Navbar>
-   </>
+    <>
+  
+    <PropAsChildren>
+      <h1>Hello Priyanshu Vatsal</h1>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi id voluptatem deserunt quidem! Molestiae explicabo, ea eligendi beatae dolore aspernatur.</p>
+    </PropAsChildren>
+
+    <PropsAsFunction clickCount={clickCount}>
+      <p>{count}</p>
+      <button>Increase</button>
+    </PropsAsFunction>
+    </>
   )
 }
 
